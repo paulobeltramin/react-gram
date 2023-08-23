@@ -1,0 +1,206 @@
+.login {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    img {
+        width: 480px;
+        object-fit: contain;
+    }
+
+    &__form {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5em;
+        height: 100%;
+        flex-direction: column;
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(228, 225, 225);
+            height: 60vh;
+            padding: 0 40px 0 40px;
+            margin-top: -10em;
+        }
+
+
+        img {
+            width: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        input {
+            display: flex;
+            padding-left: 8px;
+            width: 250px;
+            height: 35px;
+            border: 1px solid rgb(211, 238, 247, 1.2);
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 250px;
+            height: 35px;
+            background-color: rgb(65, 208, 255);
+            font-weight: 900;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1em;
+            color: rgb(211, 208, 208);
+        }
+
+        span {
+
+            color: grey;
+            margin: 1em 10px 0 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(72, 72, 247);
+            margin-top: 1.4em;
+            text-decoration: none;
+        }
+
+        &__cadastro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(228, 225, 225);
+            width: 332px;
+            margin-top: 15px;
+            height: 50px;
+
+            p {
+                display: flex;
+                color: black;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                color: rgb(25, 153, 147);
+                font-weight: 900;
+                margin-left: 5px;
+            }
+
+        }
+    }
+}
+
+.modal {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: -70%;
+    align-items: center;
+    display: none;
+
+    p {
+        font-size: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 7px;
+        border-radius: 50%;
+        font-weight: 900;
+        margin-right: -38em;
+        cursor: pointer;
+
+    }
+
+    h2 {
+        color: rgba(204, 55, 1, 0.527);
+        margin-bottom: 10px;
+        font-size: 40px;
+
+    }
+
+    &__form {
+        background-color: rgba(200, 200, 200, 0.8);
+        width: 700px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 30px;
+        border-radius: 15PX;
+
+
+
+
+
+        input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 450px;
+            height: 30px;
+            padding-left: 10px;
+            font-weight: 900;
+            border-radius: 8px;
+            border: 0px;
+        }
+
+
+        label {
+            display: flex;
+            margin: 0 auto;
+            font-weight: bolder;
+            width: 100%;
+        }
+
+
+    }
+
+    button {
+        width: 450px;
+        height: 30px;
+        background-color: lightseagreen;
+        margin-top: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        font-weight: 900;
+        color: white;
+        border: 0px;
+        cursor: pointer;
+
+    }
+
+    button:hover{
+        color: rgba(0,0,0,0.8);
+    }
+
+
+}
