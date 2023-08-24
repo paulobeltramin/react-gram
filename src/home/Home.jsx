@@ -1,15 +1,15 @@
+
 import { Header } from "../header-login/Header";
+import './index.scss'
 
 
 export const Home=()=>{
     return(
-         <>
-         <Header/>
-         <div>
-            <h1>home</h1>
-         </div>
-         
-         </>
+    <>
+    <Header/>
 
-    )
-};
+   </>
+   
+
+
+)}
