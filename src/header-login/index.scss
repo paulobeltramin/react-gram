@@ -99,12 +99,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto;
+            margin: 10px auto;
             border-radius: 10px;
-            background-color: orange;
             color: black;
             font-weight: bold;
             padding: 5px;
+            width: 400px;
+            background-color: beige;
+        }
+
+        button {
+            width: 300px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto;
+            color: black;
+            font-weight: 900;
+            background-color: gray;
+            border-radius: 6px;
+            cursor: pointer;
         }
 
     }

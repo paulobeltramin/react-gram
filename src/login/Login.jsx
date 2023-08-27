@@ -2,8 +2,7 @@
 import './index.scss'
 
 // imports
-import { Link } from 'react-router-dom';
-import  auth  from '../server/index'
+import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -41,16 +40,7 @@ export const Login = () => {
     const handleRegister = (e) => {
         e.preventDefault();
 
-        auth.createUserWithEmailAndPassword(email, password)
 
-            .then((response) => {
-                alert("cadastro efetuado com sucesso")
-                response.user.updateProfile({
-                    displayName: user
-                })
-            }).catch((error) => {
-                alert(error.message)
-            })
 
         const modal = document.querySelector(".modal")
 
@@ -62,14 +52,7 @@ export const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        auth.signInWithEmailAndPassword(email, password)
-            .then((response) => {
-                setUser(response.user.displayName)
-                alert("logado com sucesso")
-                navigate("/")
-            }).catch((error) => {
-                alert(error.message)
-            })
+
 
 
     };
@@ -77,108 +60,108 @@ export const Login = () => {
 
 
     return (
-  <div>
-    
-    <div className='fundo'>
+        <div>
+
+            <div className='fundo'>
 
 
-{/* imagem do login */}
+                {/* imagem do login */}
 
-<div className='login'>
+                <div className='login'>
 
-    <div>
-        <img src="logocel.png" alt="logo-celular" />
-    </div>
+                    <div>
+                        <img src="logocel.png" alt="logo-celular" />
+                    </div>
 
-    <div className='login__form'>
+                    <div className='login__form'>
 
 
-        {/* formulario de login */}
+                        {/* formulario de login */}
 
-        <form onSubmit={handleLogin}>
+                        <form onSubmit={handleLogin}>
 
-            <div>
-                <img src="Instagram-Logo.png" alt="" />
+                            <div>
+                                <img src="Instagram-Logo.png" alt="" />
+                            </div>
+
+                            <div>
+                                <input type="text" name="login"
+                                    placeholder='Telefone, nome de usuário ou email'
+                                    value={email} onChange={(e) => setEmail(e.target.value)} />
+
+                                <input type="password" name="senha" placeholder='senha'
+                                    value={password} onChange={(e) => setPassword(e.target.value)} />
+
+                                <Link to={'/'}><button type='submit'>Entrar</button></Link>
+
+
+                                <p>_____________ <span>OU</span> _____________</p>
+
+                            </div>
+
+                            <div>
+                                <strong><Link>Entrar com facebook</Link></strong>
+                            </div>
+
+                            <div>
+                                <Link>Esqueceu a senha?</Link>
+                            </div>
+
+
+                        </form>
+
+                        {/* links de acesso  */}
+
+                        <div className='login__form__cadastro'>
+                            <p>Não tem uma conta ?
+                                <Link onClick={openModal}>Cadastre-se</Link></p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                {/* modal de criar conta */}
+
+                <div className='modal'>
+
+                    <p onClick={toclosetModal}>X</p>
+
+                    <form className='modal__form ' onSubmit={handleRegister}>
+
+
+                        <div>
+                            <h2>Crie sua conta :) </h2>
+                        </div>
+
+                        <div>
+                            <label>Email</label>
+                            <input type="text" name="email" placeholder='email...'
+                                value={email} onChange={(e) => setEmail(e.target.value)} />
+                        </div>
+
+                        <div>
+                            <label>Nome de usuário</label>
+                            <input type="text" name="usuario" placeholder='nome de usu...'
+                                value={user} onChange={(e) => setUser(e.target.value)} />
+                        </div>
+
+                        <div>
+                            <label>Senha</label>
+                            <input type="password" name="senha" placeholder='senha...'
+                                value={password} onChange={(e) => setPassword(e.target.value)} />
+                        </div>
+
+                        <div>
+                            <button type='submit'>Criar conta</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
             </div>
 
-            <div>
-                <input type="text" name="login"
-                    placeholder='Telefone, nome de usuário ou email'
-                    value={email} onChange={(e) => setEmail(e.target.value)} />
-
-                <input type="password" name="senha" placeholder='senha'
-                    value={password} onChange={(e) => setPassword(e.target.value)} />
-
-                <button type='submit'>Entrar</button>
-
-
-                <p>_____________ <span>OU</span> _____________</p>
-
-            </div>
-
-            <div>
-                <strong><Link>Entrar com facebook</Link></strong>
-            </div>
-
-            <div>
-                <Link>Esqueceu a senha?</Link>
-            </div>
-
-
-        </form>
-
-        {/* links de acesso  */}
-
-        <div className='login__form__cadastro'>
-            <p>Não tem uma conta ?
-                <Link onClick={openModal}>Cadastre-se</Link></p>
-
         </div>
-
-    </div>
-</div>
-
-{/* modal de criar conta */}
-
-<div className='modal'>
-
-    <p onClick={toclosetModal}>X</p>
-
-    <form className='modal__form ' onSubmit={handleRegister}>
-
-
-        <div>
-            <h2>Crie sua conta :) </h2>
-        </div>
-
-        <div>
-            <label>Email</label>
-            <input type="text" name="email" placeholder='email...'
-                value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-
-        <div>
-            <label>Nome de usuário</label>
-            <input type="text" name="usuario" placeholder='nome de usu...'
-                value={user} onChange={(e) => setUser(e.target.value)} />
-        </div>
-
-        <div>
-            <label>Senha</label>
-            <input type="password" name="senha" placeholder='senha...'
-                value={password} onChange={(e) => setPassword(e.target.value)} />
-        </div>
-
-        <div>
-            <button type='submit'>Criar conta</button>
-        </div>
-
-    </form>
-
-</div>
-
-</div>
-
-</div>
     )
 }
