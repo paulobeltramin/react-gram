@@ -1,18 +1,22 @@
 .header {
 
-    width: 93px;
+
 
 
     &__icons {
         display: flex;
         flex-direction: column;
         background-color: black;
-        height: 656px;
+        bottom: 0;
+        top: 0;
+
         position: fixed;
         padding-left: 25px;
         padding-right: 25px;
         border-right: .1px solid rgb(150, 150, 150);
         justify-content: space-around;
+
+
 
 
         a {
@@ -59,12 +63,26 @@
         padding: 30px;
         background-color: rgba(30, 30, 30, 0.10);
 
+        @media screen and (max-width:780px) {
+            max-width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5em;
+
+        }
+
         p {
             color: white;
             font-size: 30px;
             display: flex;
             justify-content: end;
             cursor: pointer;
+
+            @media screen and (max-width:780px) {
+                margin-bottom: 1em;
+            }
 
 
 
@@ -106,6 +124,10 @@
             padding: 5px;
             width: 400px;
             background-color: beige;
+
+            @media screen and (max-width:780px) {
+                max-width: 200px;
+            }
         }
 
         button {
@@ -120,6 +142,10 @@
             background-color: gray;
             border-radius: 6px;
             cursor: pointer;
+
+            @media screen and (max-width:780px) {
+                max-width: 200px;
+            }
         }
 
     }

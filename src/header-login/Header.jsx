@@ -8,7 +8,7 @@ import { FiEdit, FiHome, FiInstagram, FiLogIn, FiMenu, FiSearch, FiX } from "rea
 import { BsCameraReels, BsHeart } from "react-icons/bs"
 import { BiMessageRoundedCheck, BiLogoInstagramAlt } from "react-icons/bi"
 import { CgAddR } from "react-icons/cg"
-import { useState } from "react"
+
 
 
 

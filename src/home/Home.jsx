@@ -52,12 +52,7 @@ export const Home = () => {
 
                     </div>
 
-                    <div className='perfil__icon'>
-
-
-
-                    </div>
-
+               
                     <div className='perfil__icon'>
                         <span>+</span>
                         <p>novo</p>

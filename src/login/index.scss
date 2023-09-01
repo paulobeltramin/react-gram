@@ -5,9 +5,20 @@
     align-items: center;
     height: 100vh;
 
+    @media screen and (max-width:780px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20%;
+    }
+
     img {
         width: 480px;
         object-fit: contain;
+
+        @media screen and (max-width:780px) {
+            display: none;
+        }
     }
 
     &__form {
@@ -119,10 +130,13 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
-    margin-top: -70%;
     align-items: center;
     display: none;
+
+    @media screen and (max-width:780px) {
+        margin-top: -8em;
+    }
+
 
     p {
         font-size: 20px;
@@ -133,6 +147,12 @@
         font-weight: 900;
         margin-right: -38em;
         cursor: pointer;
+
+        @media screen and (max-width:780px) {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
 
     }
 
@@ -154,6 +174,10 @@
         line-height: 30px;
         border-radius: 15PX;
 
+        @media screen and (max-width:780px) {
+            width: 400px;
+        }
+
 
 
 
@@ -169,6 +193,10 @@
             font-weight: 900;
             border-radius: 8px;
             border: 0px;
+
+            @media screen and (max-width:780px) {
+                width: 350px;
+            }
         }
 
 
@@ -196,11 +224,17 @@
         border: 0px;
         cursor: pointer;
 
+        @media screen and (max-width:780px) {
+            width: 350px;
+        }
+
     }
 
     button:hover {
         color: rgba(0, 0, 0, 0.8);
     }
+
+
 
 
 }
